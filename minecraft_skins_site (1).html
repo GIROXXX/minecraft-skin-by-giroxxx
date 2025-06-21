@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MINECRAFT SKIN BY GIROXXX.COM</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #111;
+      color: #fff;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #1e1e1e;
+      padding: 1rem;
+      text-align: center;
+    }
+    h1 {
+      color: #00ff66;
+    }
+    nav {
+      background-color: #1a1a1a;
+      padding: 0.5rem;
+      text-align: center;
+    }
+    nav a {
+      color: #00ff66;
+      margin: 0 1rem;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .skins-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.5rem;
+      padding: 2rem;
+    }
+    .skin-card {
+      background-color: #222;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 0 10px #00ff66;
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+    .skin-card:hover {
+      transform: scale(1.05);
+    }
+    .skin-card img {
+      width: 100%;
+      height: auto;
+    }
+    .skin-card button {
+      background-color: #00ff66;
+      color: #000;
+      border: none;
+      padding: 0.5rem 1rem;
+      margin: 1rem;
+      cursor: pointer;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+    .ai-generator {
+      background-color: #1e1e1e;
+      padding: 2rem;
+      text-align: center;
+    }
+    .ai-generator input[type="text"] {
+      width: 80%;
+      padding: 0.75rem;
+      margin: 1rem 0;
+      border-radius: 5px;
+      border: none;
+      font-size: 1rem;
+    }
+    .ai-generator button {
+      background-color: #00ff66;
+      color: #000;
+      padding: 0.75rem 1.5rem;
+      font-size: 1rem;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    .ai-result {
+      margin-top: 2rem;
+      color: #ccc;
+    }
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #1e1e1e;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>MINECRAFT SKIN BY GIROXXX.COM</h1>
+    <p>اكتشف أفضل السكنات المخصصة لماين كرافت</p>
+  </header>
+
+  <nav>
+    <a href="#">الرئيسية</a>
+    <a href="#skins">المعرض</a>
+    <a href="#download">التحميل</a>
+    <a href="#ai">صانع السكنات الذكي</a>
+  </nav>
+
+  <main class="skins-container" id="skins">
+    <div class="skin-card">
+      <img src="minecraft_skin_GIROXXX.png" alt="GIROXXX Skin 1">
+      <button onclick="window.location.href='minecraft_skin_GIROXXX.png'">تحميل السكن</button>
+    </div>
+    <div class="skin-card">
+      <img src="skin_green_warrior.png" alt="Green Warrior Skin">
+      <button onclick="window.location.href='skin_green_warrior.png'">تحميل السكن</button>
+    </div>
+    <div class="skin-card">
+      <img src="skin_shadow_archer.jpg" alt="Shadow Archer Skin">
+      <button onclick="window.location.href='skin_shadow_archer.jpg'">تحميل السكن</button>
+    </div>
+    <div class="skin-card">
+      <img src="skin_fire_knight.png" alt="Fire Knight Skin">
+      <button onclick="window.location.href='skin_fire_knight.png'">تحميل السكن</button>
+    </div>
+    <div class="skin-card">
+      <img src="skin_ice_mage.jpg" alt="Ice Mage Skin">
+      <button onclick="window.location.href='skin_ice_mage.jpg'">تحميل السكن</button>
+    </div>
+  </main>
+
+  <section class="ai-generator" id="ai">
+    <h2>صمم سكنك الخاص باستخدام الذكاء الاصطناعي</h2>
+    <p>أدخل وصفًا لشكل السكن الذي تريده (مثال: شخصية ترتدي بدلة خضراء وقبعة سوداء)</p>
+    <input type="text" id="skinDescription" placeholder="اكتب وصف السكن هنا...">
+    <br>
+    <button onclick="generateSkin()">صمم السكن الآن</button>
+    <div class="ai-result" id="aiResult"></div>
+  </section>
+
+  <footer>
+    &copy; 2025 MINECRAFT SKIN BY GIROXXX.COM | تصميم بواسطة ChatGPT
+  </footer>
+
+  <script>
+    function generateSkin() {
+      const description = document.getElementById('skinDescription').value;
+      const resultDiv = document.getElementById('aiResult');
+
+      if (!description.trim()) {
+        resultDiv.innerHTML = "الرجاء كتابة وصف لصناعة السكن.";
+        return;
+      }
+
+      resultDiv.innerHTML = `
+        <p>✅ تم إرسال وصفك إلى مساعد الذكاء الاصطناعي:</p>
+        <p><em>"${description}"</em></p>
+        <p>🚧 جاري توليد السكن... (ميزة تجريبية)</p>
+      `;
+    }
+  </script>
+</body>
+</html>
